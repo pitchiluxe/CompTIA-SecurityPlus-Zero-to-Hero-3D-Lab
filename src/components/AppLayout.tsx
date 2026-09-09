@@ -42,7 +42,7 @@ import { EXAM_PASSING_SCORE, EXAM_VERSION } from '../data/examBlueprint';
 import { useMasteryStore } from '../store/useMasteryStore';
 
 const NAV = [
-  { to: '/', label: 'Dashboard', icon: LayoutDashboard, end: true },
+  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard, end: true },
   { to: '/roadmap', label: 'Roadmap', icon: Map, end: false },
   { to: '/soc', label: 'SOC Environment', icon: Boxes, end: false },
   { to: '/path', label: 'Connection Path', icon: RouteIcon, end: false },

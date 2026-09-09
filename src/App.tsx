@@ -120,7 +120,7 @@ function RouteFallback() {
 
 export function App() {
   const location = useLocation();
-  if (location.pathname === '/landing') {
+  if (location.pathname === '/' || location.pathname === '/landing') {
     return <LandingPage />;
   }
 
@@ -128,7 +128,8 @@ export function App() {
     <AppLayout>
       <Suspense fallback={<RouteFallback />}>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/soc" element={<SOCView />} />
           <Route path="/path" element={<PathView />} />

@@ -254,7 +254,7 @@ export function LandingPage() {
               build job-ready skills with zero risk to live systems.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in-up [animation-delay:300ms]">
-              <Button onClick={() => navigate('/')}>Access the Lab</Button>
+              <Button onClick={() => navigate('/dashboard')}>Access the Lab</Button>
               <Button variant="ghost" onClick={() => setShowContact(true)}>
                 <Mail className="mr-2 h-4 w-4" />
                 Contact Us
@@ -362,7 +362,7 @@ export function LandingPage() {
                   guided 3D labs, safe simulations, and career-focused projects.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row md:justify-start">
-                  <Button onClick={() => navigate('/')}>Start learning</Button>
+                  <Button onClick={() => navigate('/dashboard')}>Start learning</Button>
                   <Button variant="ghost" onClick={() => setShowContact(true)}>
                     Get in touch
                   </Button>
@@ -382,7 +382,7 @@ export function LandingPage() {
               see how far the zero-to-hero path can take you.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <Button onClick={() => navigate('/')}>Access the Lab</Button>
+              <Button onClick={() => navigate('/dashboard')}>Access the Lab</Button>
               <Button variant="ghost" onClick={() => setShowContact(true)}>
                 Contact Us
               </Button>
