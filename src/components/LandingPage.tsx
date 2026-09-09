@@ -240,12 +240,12 @@ export function LandingPage() {
               <Cpu className="h-4 w-4" />
               <span>CompTIA Network+ & Security+ aligned</span>
             </div>
-            <h1 className="mb-6 text-4xl font-extrabold leading-tight text-white sm:text-6xl animate-fade-in-up">
-              From cables to careers —{' '}
-              <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent">
-                master networking & security
-              </span>{' '}
-              in 3D
+            <h1 className="mb-6 text-balance text-center text-4xl font-extrabold leading-tight text-white sm:text-6xl animate-fade-in-up">
+              From cables to careers —
+              <br className="hidden sm:block" />
+              <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent sm:whitespace-nowrap">
+                master networking & security in 3D
+              </span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted animate-fade-in-up [animation-delay:150ms]">
               A hands-on, browser-based lab built by{' '}
