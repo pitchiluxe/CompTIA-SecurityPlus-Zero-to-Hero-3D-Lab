@@ -7,6 +7,7 @@ import { useProgressStore } from '../store/useProgressStore';
 import { useMasteryStore } from '../store/useMasteryStore';
 import { dueForReview, WEAK_THRESHOLD } from '../lib/srs';
 import { useEvidenceStore } from '../store/useEvidenceStore';
+import { LiveUsers } from './LiveUsers';
 import { Card, MasteryPill, PageHeader, ProgressBar, StatTile } from './ui';
 
 export function Dashboard() {
@@ -53,6 +54,7 @@ export function Dashboard() {
       <PageHeader
         title="Dashboard"
         subtitle={`CompTIA Security+ ${EXAM_VERSION} · ${EXAM_MAX_QUESTIONS} questions · ${EXAM_DURATION_MINUTES} minutes · 750 to pass`}
+        actions={<LiveUsers />}
       />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
