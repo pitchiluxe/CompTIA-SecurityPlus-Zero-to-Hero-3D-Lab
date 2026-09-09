@@ -12,7 +12,7 @@
     "test:file": "vitest run",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "serve:presence": "node server/presence.mjs",
+    "serve:presence": "npm --prefix server start",
     "gen:index": "vitest run --config vitest.tools.config.ts"
   },
   "keywords": [
@@ -35,7 +35,6 @@
     "react-router-dom": "^7.18.3",
     "tailwindcss": "^4.3.3",
     "three": "^0.185.1",
-    "ws": "^8.21.3",
     "zustand": "^5.0.15"
   },
   "devDependencies": {

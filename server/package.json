@@ -1,0 +1,19 @@
+{
+  "name": "netsec-presence-server",
+  "version": "1.0.0",
+  "description": "WebSocket presence server for the NetSec Lab live user counter.",
+  "main": "presence.mjs",
+  "scripts": {
+    "start": "node presence.mjs"
+  },
+  "keywords": [],
+  "author": "Erick OMARI",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "ws": "^8.21.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
