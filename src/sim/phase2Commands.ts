@@ -1,0 +1,172 @@
+import type { PreparedCommand } from './types';
+
+// ---------------------------------------------------------------------------
+// Phase 2 prepared outputs — Security Fundamentals.
+//
+// Phase 2 is conceptual, so these commands produce *reference artifacts* the
+// learner classifies rather than host telemetry. Same closed-allowlist
+// contract: nothing executes.
+// ---------------------------------------------------------------------------
+
+export const PHASE_2_COMMANDS: PreparedCommand[] = [
+  {
+    match: 'list controls',
+    tool: 'platform',
+    provenance: 'simulated',
+    output: [
+      'Control inventory — Northwind reference environment',
+      '',
+      'ID    CONTROL                        FUNCTION      TYPE',
+      '----  -----------------------------  ------------  --------------',
+      'C-01  Door badge reader              Preventive    Physical',
+      'C-02  Security guard patrol log      Detective     Physical',
+      'C-03  Firewall deny rule             Preventive    Technical',
+      'C-04  SIEM correlation alert         Detective     Technical',
+      'C-05  Automated backup restore       Corrective    Technical',
+      'C-06  Multi-factor authentication    Preventive    Technical',
+      'C-07  Quarterly access review        Detective     Administrative',
+      'C-08  Security awareness training    Preventive    Administrative',
+      'C-09  Incident response plan         Corrective    Administrative',
+      'C-10  CCTV recording                 Detective     Physical',
+      'C-11  Disciplinary policy            Deterrent     Administrative',
+      'C-12  Warm site failover             Compensating  Technical',
+    ].join('\n'),
+    teaches:
+      'Every control has two independent axes: what it DOES (preventive, detective, corrective) and HOW it is implemented (physical, technical, administrative). A door badge reader and a firewall rule are both preventive; they differ only on the second axis. Exam questions routinely give you one axis and ask for the other.',
+  },
+  {
+    match: 'classify control c-04',
+    tool: 'platform',
+    provenance: 'simulated',
+    output: [
+      'Control:   C-04  SIEM correlation alert',
+      'Function:  Detective',
+      'Type:      Technical',
+      '',
+      'Reasoning:',
+      '  Detective — it identifies an event that has already happened. It does',
+      '  not stop the event, and it does not repair the damage.',
+      '  Technical — it is implemented in software, not by a person or a policy.',
+      '',
+      'Common confusion:',
+      '  An alert that automatically blocks an address is preventive AND',
+      '  detective. Function follows behaviour, not the product category.',
+    ].join('\n'),
+    teaches:
+      'Classify by what the control actually does in the moment, not by the vendor label on the box. The same tool can occupy different categories depending on how it is configured.',
+  },
+  {
+    match: 'classify control c-05',
+    tool: 'platform',
+    provenance: 'simulated',
+    output: [
+      'Control:   C-05  Automated backup restore',
+      'Function:  Corrective',
+      'Type:      Technical',
+      '',
+      'Reasoning:',
+      '  Corrective — it restores the system after an incident. It neither',
+      '  prevents the incident nor detects it.',
+      '  Technical — implemented in software.',
+      '',
+      'Common confusion:',
+      '  Backups are often called "preventive" because they feel protective.',
+      '  They prevent nothing. They reduce impact after the fact, which is',
+      '  precisely what corrective means.',
+    ].join('\n'),
+    teaches:
+      'Backups are the single most misclassified control on the exam. They do not stop anything from happening — they reduce the impact once it has.',
+  },
+  {
+    match: 'classify control c-12',
+    tool: 'platform',
+    provenance: 'simulated',
+    output: [
+      'Control:   C-12  Warm site failover',
+      'Function:  Compensating',
+      'Type:      Technical',
+      '',
+      'Reasoning:',
+      '  Compensating — it is deployed because the primary control (a fully',
+      '  redundant hot site) is not feasible on the available budget. A',
+      '  compensating control provides comparable protection by another route.',
+      '',
+      'Common confusion:',
+      '  Compensating is not a weaker synonym for "corrective". It describes',
+      '  WHY the control was chosen — as a substitute — not what it does.',
+    ].join('\n'),
+    teaches:
+      'Compensating answers "why this control instead of the obvious one". Deterrent answers "it discourages the actor from trying". Both sit alongside preventive/detective/corrective rather than replacing them.',
+  },
+  {
+    match: 'show attack surface srv-01',
+    tool: 'platform',
+    provenance: 'simulated',
+    output: [
+      'Attack surface — SRV-01 (192.168.1.30)',
+      '',
+      'REACHABLE FROM THE NETWORK',
+      '  22/tcp   sshd    OpenSSH 8.9p1   encrypted, publickey auth',
+      '  80/tcp   nginx   1.18.0          CLEARTEXT, version disclosed',
+      '',
+      'NOT REACHABLE (bound to loopback)',
+      '  5432/tcp postgres 14             127.0.0.1 only',
+      '',
+      'NON-NETWORK SURFACE',
+      '  Local accounts with interactive shells:  2 (postgres, analyst1)',
+      '  World-writable executables:              1 (/var/www/deploy.sh)',
+      '  Sudo grants:                             1 scoped command',
+      '',
+      'Surface reduction opportunities: 3',
+    ].join('\n'),
+    teaches:
+      'Attack surface is not only open ports. Local accounts, writable files, and privilege grants are all surface. Binding postgres to loopback removed one item entirely — the cheapest reduction available.',
+  },
+  {
+    match: 'show defense layers',
+    tool: 'platform',
+    provenance: 'simulated',
+    output: [
+      'Defence in depth — layers protecting the patient records asset',
+      '',
+      'LAYER            EXAMPLE CONTROL                 IF THIS LAYER FAILS',
+      '---------------  ------------------------------  ---------------------------',
+      '1 Policy         Acceptable use, access review   Next layer still applies',
+      '2 Physical       Badge reader, CCTV              Next layer still applies',
+      '3 Perimeter      Firewall policy, VPN + MFA      Next layer still applies',
+      '4 Network        VLAN segmentation, IDS          Next layer still applies',
+      '5 Endpoint       Host firewall, EDR, patching    Next layer still applies',
+      '6 Application    Input validation, authz checks  Next layer still applies',
+      '7 Data           Encryption at rest, backups     Last layer before the asset',
+      '',
+      'ASSET: Patient records (12,000 histories)',
+      '',
+      'No single layer is trusted to hold. That is the entire idea.',
+    ].join('\n'),
+    teaches:
+      'Defence in depth assumes every individual control will eventually fail. The question is never "is this layer perfect" but "what still stands when it fails". Compare this to Zero Trust, which additionally refuses to trust a request just because it got past the perimeter.',
+  },
+  {
+    match: 'assess risk northwind-vpn',
+    tool: 'platform',
+    provenance: 'simulated',
+    output: [
+      'Risk assessment — Northwind Clinic VPN appliance',
+      '',
+      'ASSET            Patient records system (12,000 histories)',
+      'THREAT           External attacker scanning for vulnerable appliances',
+      'VULNERABILITY    Firmware 4 versions behind; published auth bypass',
+      '',
+      'LIKELIHOOD       High     (advisory published, appliance internet-facing)',
+      'IMPACT           Severe   (regulated health data, patient harm)',
+      'INHERENT RISK    HIGH',
+      '',
+      'CONTROL          Patch firmware + enforce MFA on VPN authentication',
+      'RESIDUAL RISK    MODERATE (unknown future flaws; session token theft)',
+      '',
+      'TREATMENT        Mitigate  (accept / avoid / transfer / mitigate)',
+    ].join('\n'),
+    teaches:
+      'Risk = likelihood x impact, assessed twice: once before controls (inherent) and once after (residual). The four treatment options are accept, avoid, transfer, and mitigate — and the exam expects you to name which one a described action represents.',
+  },
+];

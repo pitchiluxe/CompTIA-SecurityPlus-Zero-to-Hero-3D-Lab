@@ -1,0 +1,33 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+coverage
+.DS_Store
+Thumbs.db
+*.log
+.cache
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.tsbuildinfo
+
+# IDE / agent config folders
+.claude/
+.agents/
+.devin/
+
+# Root copies of assets that also live in public
+/Erick.jpg

@@ -1,0 +1,317 @@
+import type { Device } from '../types';
+
+/**
+ * SOC (Security Operations Center) environment devices
+ * Positioned in a room layout for Phase 0
+ */
+export const SOC_DEVICES: Device[] = [
+  {
+    id: 'firewall-01',
+    type: 'firewall',
+    label: 'Palo Alto PA-220',
+    position: [-8, 0, 2],
+    ip: '10.0.0.1',
+    mac: '00:11:22:33:44:55',
+    status: 'up',
+    interfaces: [
+      { name: 'ethernet1/1', ip: '10.0.0.1', mac: '00:11:22:33:44:55', status: 'up' },
+      { name: 'ethernet1/2', ip: '192.168.1.1', mac: '00:11:22:33:44:56', status: 'up' },
+    ],
+    users: ['admin', 'operator'],
+    securityState: {
+      policyBase: 1500,
+      threatPrevention: 'enabled',
+      urlFiltering: 'enabled',
+      wildFire: 'enabled',
+      lastUpdate: '2026-09-01',
+    },
+    events: [
+      {
+        id: 'fw1',
+        timestamp: '2026-09-08T10:15:00Z',
+        level: 'info',
+        source: 'THREAT',
+        message: 'Blocked known-malicious IP',
+      },
+      {
+        id: 'fw2',
+        timestamp: '2026-09-08T10:16:00Z',
+        level: 'warn',
+        source: 'URLF',
+        message: 'Blocked phishing site',
+      },
+    ],
+  },
+  {
+    id: 'windows-endpoint-01',
+    type: 'pc',
+    label: 'Windows 11 Pro WS-01',
+    position: [-6, 0, -4],
+    ip: '192.168.1.10',
+    mac: 'aa:bb:cc:dd:ee:01',
+    // Alerting on purpose: this is the host investigated in the Phase 0
+    // triage lab (suspicious outbound PowerShell session).
+    status: 'alert',
+    interfaces: [{ name: 'Ethernet', ip: '192.168.1.10', mac: 'aa:bb:cc:dd:ee:01', status: 'up' }],
+    users: ['analyst1', 'admin'],
+    securityState: {
+      defender: 'enabled',
+      firewall: 'enabled',
+      uac: 'enabled',
+      bitlocker: 'enabled',
+      lastPatch: '2026-08-15',
+    },
+    events: [
+      {
+        id: 'win1',
+        timestamp: '2026-09-08T10:10:00Z',
+        level: 'info',
+        source: 'SYSTEM',
+        message: 'User logon',
+      },
+      {
+        id: 'win2',
+        timestamp: '2026-09-08T10:11:00Z',
+        level: 'warn',
+        source: 'POWERSHELL',
+        message: 'Script execution',
+      },
+    ],
+  },
+  {
+    id: 'linux-server-01',
+    type: 'server',
+    label: 'Ubuntu 22.04 LTS SRV-01',
+    position: [6, 0, -4],
+    ip: '192.168.1.20',
+    mac: 'aa:bb:cc:dd:ee:02',
+    status: 'up',
+    interfaces: [{ name: 'eth0', ip: '192.168.1.20', mac: 'aa:bb:cc:dd:ee:02', status: 'up' }],
+    users: ['admin', 'secops'],
+    securityState: {
+      ssh: 'enabled (key-auth)',
+      ufw: 'enabled',
+      fail2ban: 'enabled',
+      apparmor: 'enabled',
+      lastPatch: '2026-08-20',
+    },
+    events: [
+      {
+        id: 'lnx1',
+        timestamp: '2026-09-08T10:12:00Z',
+        level: 'info',
+        source: 'SSH',
+        message: 'Accepted publickey',
+      },
+      {
+        id: 'lnx2',
+        timestamp: '2026-09-08T10:13:00Z',
+        level: 'error',
+        source: 'PAM',
+        message: 'Failed password',
+      },
+    ],
+  },
+  {
+    id: 'switch-01',
+    type: 'switch',
+    label: 'Cisco Catalyst 2960X',
+    position: [0, 0, 6],
+    ip: '192.168.1.254',
+    mac: 'aa:bb:cc:dd:ee:fe',
+    status: 'up',
+    interfaces: [
+      { name: 'GigabitEthernet0/1', ip: '192.168.1.1', mac: 'aa:bb:cc:dd:ee:fd', status: 'up' },
+      { name: 'GigabitEthernet0/2', ip: '192.168.1.10', mac: 'aa:bb:cc:dd:ee:01', status: 'up' },
+      { name: 'GigabitEthernet0/3', ip: '192.168.1.20', mac: 'aa:bb:cc:dd:ee:02', status: 'up' },
+      { name: 'GigabitEthernet0/4', ip: '192.168.1.30', mac: 'aa:bb:cc:dd:ee:03', status: 'up' },
+    ],
+    users: ['netadmin'],
+    securityState: {
+      portSecurity: 'enabled',
+      dhcpSnooping: 'enabled',
+      dot1x: 'enabled',
+      lastConfig: '2026-09-01',
+    },
+    events: [
+      {
+        id: 'sw1',
+        timestamp: '2026-09-08T10:09:00Z',
+        level: 'info',
+        source: 'LINK',
+        message: 'Port Gi0/2 up',
+      },
+      {
+        id: 'sw2',
+        timestamp: '2026-09-08T10:10:00Z',
+        level: 'info',
+        source: 'LINK',
+        message: 'Port Gi0/3 up',
+      },
+    ],
+  },
+  {
+    id: 'router-01',
+    type: 'router',
+    label: 'Cisco ISR 4321',
+    position: [8, 0, 0],
+    ip: '10.0.0.2',
+    mac: 'aa:bb:cc:dd:ee:ff',
+    status: 'up',
+    interfaces: [
+      { name: 'GigabitEthernet0/0/0', ip: '10.0.0.2', mac: 'aa:bb:cc:dd:ee:ff', status: 'up' },
+      { name: 'GigabitEthernet0/0/1', ip: '192.168.0.1', mac: 'aa:bb:cc:dd:ee:fe', status: 'up' },
+    ],
+    users: ['netadmin'],
+    securityState: {
+      zoneBasedFirewall: 'enabled',
+      ips: 'signature-update',
+      lastUpdate: '2026-09-01',
+    },
+    events: [
+      {
+        id: 'rt1',
+        timestamp: '2026-09-08T10:08:00Z',
+        level: 'info',
+        source: 'BGP',
+        message: 'Peer established',
+      },
+    ],
+  },
+  {
+    id: 'access-point-01',
+    type: 'ap',
+    label: 'Cisco Catalyst 9120',
+    position: [0, 0, -8],
+    ip: '192.168.1.100',
+    mac: 'aa:bb:cc:dd:ee:99',
+    status: 'up',
+    interfaces: [
+      { name: 'Dot11Radio0', ip: '192.168.1.100', mac: 'aa:bb:cc:dd:ee:99', status: 'up' },
+    ],
+    users: ['guest-user', 'mobile-user'],
+    securityState: {
+      wpa3: 'enabled',
+      rfId: 'enabled',
+      cleanAir: 'enabled',
+      lastUpdate: '2026-08-28',
+    },
+    events: [
+      {
+        id: 'ap1',
+        timestamp: '2026-09-08T10:05:00Z',
+        level: 'info',
+        source: 'CLIENT',
+        message: 'Association',
+      },
+      {
+        id: 'ap2',
+        timestamp: '2026-09-08T10:06:00Z',
+        level: 'warn',
+        source: 'RRM',
+        message: 'Channel change',
+      },
+    ],
+  },
+  {
+    id: 'workstation-01',
+    type: 'pc',
+    label: 'Analyst Workstation WS-02',
+    position: [-4, 0, 6],
+    ip: '192.168.1.11',
+    mac: 'aa:bb:cc:dd:ee:11',
+    status: 'up',
+    interfaces: [{ name: 'Ethernet', ip: '192.168.1.11', mac: 'aa:bb:cc:dd:ee:11', status: 'up' }],
+    users: ['analyst2'],
+    securityState: {
+      defender: 'enabled',
+      firewall: 'enabled',
+      sysmon: 'enabled',
+      lastPatch: '2026-08-10',
+    },
+    events: [
+      {
+        id: 'ws1',
+        timestamp: '2026-09-08T10:07:00Z',
+        level: 'info',
+        source: 'SYSMON',
+        message: 'Process create',
+      },
+      {
+        id: 'ws2',
+        timestamp: '2026-09-08T10:08:00Z',
+        level: 'info',
+        source: 'SYSMON',
+        message: 'Network connect',
+      },
+    ],
+  },
+  {
+    id: 'siem-01',
+    type: 'siem',
+    label: 'Splunk Enterprise',
+    // Floor position. Devices are laid out on the floor plane (y = 0); the mesh
+    // adds its own half-height. Two devices sharing an (x, z) would collide in
+    // 3D and collapse to one node in the top-down 2D fallback.
+    position: [3, 0, 4],
+    ip: '192.168.1.50',
+    mac: 'aa:bb:cc:dd:ee:50',
+    status: 'up',
+    interfaces: [{ name: 'eth0', ip: '192.168.1.50', mac: 'aa:bb:cc:dd:ee:50', status: 'up' }],
+    users: ['admin', 'analyst'],
+    securityState: {
+      indexing: 'enabled',
+      alerting: 'enabled',
+      license: 'enterprise',
+      lastBackup: '2026-09-07',
+    },
+    events: [
+      {
+        id: 'si1',
+        timestamp: '2026-09-08T10:14:00Z',
+        level: 'info',
+        source: 'FW',
+        message: 'Log received',
+      },
+      {
+        id: 'si2',
+        timestamp: '2026-09-08T10:15:00Z',
+        level: 'info',
+        source: 'WIN',
+        message: 'Log received',
+      },
+    ],
+  },
+  {
+    id: 'monitor-01',
+    type: 'pc',
+    label: 'Security Monitoring Display',
+    // Analyst console in front of the video wall (wall sits at z = -12).
+    position: [-3, 0, -9],
+    ip: '192.168.1.51',
+    mac: 'aa:bb:cc:dd:ee:51',
+    status: 'up',
+    interfaces: [{ name: 'HDMI', ip: '192.168.1.51', mac: 'aa:bb:cc:dd:ee:51', status: 'up' }],
+    users: [],
+    securityState: {
+      dashboard: 'live',
+      refreshRate: '5s',
+    },
+    events: [
+      {
+        id: 'mon1',
+        timestamp: '2026-09-08T10:16:00Z',
+        level: 'info',
+        source: 'DASH',
+        message: 'Alert spike',
+      },
+      {
+        id: 'mon2',
+        timestamp: '2026-09-08T10:17:00Z',
+        level: 'info',
+        source: 'DASH',
+        message: 'Top 5 sources',
+      },
+    ],
+  },
+];

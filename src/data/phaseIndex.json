@@ -1,0 +1,942 @@
+[
+  {
+    "id": "phase-0",
+    "number": 0,
+    "title": "Platform Foundation & Security Lab",
+    "description": "Enter the SOC environment, inspect devices, navigate the course roadmap, track progress, and run your first safe labs.",
+    "lessons": [
+      {
+        "id": "p0-lesson-0",
+        "title": "Welcome to the Security+ Zero-to-Hero Platform"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p0-lab-0",
+        "title": "Enter the SOC Environment"
+      },
+      {
+        "id": "p0-lab-1",
+        "title": "First Triage — Host Command Line"
+      }
+    ]
+  },
+  {
+    "id": "phase-1",
+    "number": 1,
+    "title": "Computer, Network & Security Foundations",
+    "description": "How computers, operating systems, and networks actually work — and where the security controls sit. Everything later in the course attaches to this path.",
+    "lessons": [
+      {
+        "id": "p1-lesson-0",
+        "title": "Computers, Operating Systems and Processes"
+      },
+      {
+        "id": "p1-lesson-1",
+        "title": "The Command Line on Windows and Linux"
+      },
+      {
+        "id": "p1-lesson-2",
+        "title": "Networking Foundations — TCP/IP, Addressing, DNS and DHCP"
+      },
+      {
+        "id": "p1-lesson-3",
+        "title": "Network Devices, Secure Protocols and the Connection Path"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p1-lab-0",
+        "title": "Explore a Windows Endpoint"
+      },
+      {
+        "id": "p1-lab-1",
+        "title": "Explore a Linux Endpoint"
+      },
+      {
+        "id": "p1-lab-2",
+        "title": "Inspect Processes on Both Platforms"
+      },
+      {
+        "id": "p1-lab-3",
+        "title": "Inspect Network Configuration"
+      },
+      {
+        "id": "p1-lab-4",
+        "title": "Identify Listening Ports and Attack Surface"
+      },
+      {
+        "id": "p1-lab-5",
+        "title": "Trace a Client-to-Server Connection"
+      }
+    ]
+  },
+  {
+    "id": "phase-2",
+    "number": 2,
+    "title": "Security Fundamentals",
+    "description": "The vocabulary every later phase reuses: CIA, AAA, the security principles, the language of risk, and the control taxonomy. Precision here is what separates a finding that gets funded from one that gets ignored.",
+    "lessons": [
+      {
+        "id": "p2-lesson-0",
+        "title": "The CIA Triad and the AAA Model"
+      },
+      {
+        "id": "p2-lesson-1",
+        "title": "Security Principles — Least Privilege, Defence in Depth, Zero Trust"
+      },
+      {
+        "id": "p2-lesson-2",
+        "title": "The Language of Risk"
+      },
+      {
+        "id": "p2-lesson-3",
+        "title": "Security Controls and Their Two Axes"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p2-lab-0",
+        "title": "Classify the Control Inventory"
+      },
+      {
+        "id": "p2-lab-1",
+        "title": "Map Defence in Depth to a Real Asset"
+      },
+      {
+        "id": "p2-lab-2",
+        "title": "Run a Full Risk Assessment"
+      }
+    ]
+  },
+  {
+    "id": "phase-3",
+    "number": 3,
+    "title": "Threats, Vulnerabilities & Attacks",
+    "description": "The largest exam domain at 22%. Malware, social engineering, password attacks, and attack categories across the estate — taught as recognition and defence, with every technique described by the evidence it leaves and the control that catches it.",
+    "lessons": [
+      {
+        "id": "p3-lesson-0",
+        "title": "Malware — Classifying by Propagation and Behaviour"
+      },
+      {
+        "id": "p3-lesson-1",
+        "title": "Social Engineering and the Phishing Family"
+      },
+      {
+        "id": "p3-lesson-2",
+        "title": "Password Attacks and Insider Threats"
+      },
+      {
+        "id": "p3-lesson-3",
+        "title": "Attack Categories Across the Estate"
+      },
+      {
+        "id": "p3-lesson-4",
+        "title": "The Attack Chain — Putting It Together"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p3-lab-0",
+        "title": "Analyse a Phishing Email"
+      },
+      {
+        "id": "p3-lab-1",
+        "title": "Identify Malware from Behaviour"
+      },
+      {
+        "id": "p3-lab-2",
+        "title": "Investigate a Password Attack"
+      },
+      {
+        "id": "p3-lab-3",
+        "title": "Attack Categories Across the Estate"
+      },
+      {
+        "id": "p3-lab-4",
+        "title": "Walk the Attack Chain End to End"
+      }
+    ]
+  },
+  {
+    "id": "phase-4",
+    "number": 4,
+    "title": "Security Architecture",
+    "description": "The topology the earlier phases have been implicitly describing. Zones and segmentation, the boundary controls that enforce them, Zero Trust and NAC, deception, and the resilience that makes availability a security property.",
+    "lessons": [
+      {
+        "id": "p4-lesson-0",
+        "title": "Segmentation, VLANs and Security Zones"
+      },
+      {
+        "id": "p4-lesson-1",
+        "title": "Boundary Controls — Firewalls, IDS, IPS, WAF and Proxies"
+      },
+      {
+        "id": "p4-lesson-2",
+        "title": "Trust, Access and Deception — Zero Trust, VPN, NAC, Honeypots"
+      },
+      {
+        "id": "p4-lesson-3",
+        "title": "Secure Architecture, Redundancy and High Availability"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p4-lab-0",
+        "title": "Map the Security Zones"
+      },
+      {
+        "id": "p4-lab-1",
+        "title": "Place the Boundary Controls"
+      },
+      {
+        "id": "p4-lab-2",
+        "title": "Trace Flows Across Zone Boundaries"
+      },
+      {
+        "id": "p4-lab-3",
+        "title": "Review the Architecture for Resilience and Deception"
+      }
+    ]
+  },
+  {
+    "id": "phase-5",
+    "number": 5,
+    "title": "Identity & Access Management",
+    "description": "The major career component. Identity as the control plane, authentication factors and why not all MFA is equal, federation protocols, directory services and Kerberos, authorisation models, and the joiner-mover-leaver lifecycle you will spend your career operating.",
+    "lessons": [
+      {
+        "id": "p5-lesson-0",
+        "title": "Identity and the AAA Model in Practice"
+      },
+      {
+        "id": "p5-lesson-1",
+        "title": "Authentication Factors, MFA and Password Policy"
+      },
+      {
+        "id": "p5-lesson-2",
+        "title": "SSO, Federation, SAML, OAuth and OpenID Connect"
+      },
+      {
+        "id": "p5-lesson-3",
+        "title": "Directory Services — LDAP, Active Directory and Kerberos"
+      },
+      {
+        "id": "p5-lesson-4",
+        "title": "Authorization Models — RBAC, ABAC, Least Privilege and PAM"
+      },
+      {
+        "id": "p5-lesson-5",
+        "title": "The Identity Lifecycle and Non-Human Identities"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p5-lab-0",
+        "title": "Design the Employee Lifecycle"
+      },
+      {
+        "id": "p5-lab-1",
+        "title": "Authentication, MFA and Federation"
+      },
+      {
+        "id": "p5-lab-2",
+        "title": "Directory Services and Kerberos"
+      },
+      {
+        "id": "p5-lab-3",
+        "title": "Authorization, Privilege Creep and PAM"
+      },
+      {
+        "id": "p5-lab-4",
+        "title": "Troubleshoot the Identity Workflow"
+      }
+    ]
+  },
+  {
+    "id": "phase-6",
+    "number": 6,
+    "title": "Cryptography & PKI",
+    "description": "The machinery underneath everything earlier phases relied on. Four operations that get constantly confused, symmetric and asymmetric cryptography, hashing and signatures, and the certificate trust chain that makes TLS possible.",
+    "lessons": [
+      {
+        "id": "p6-lesson-0",
+        "title": "Encryption vs Hashing vs Encoding vs Signing"
+      },
+      {
+        "id": "p6-lesson-1",
+        "title": "Symmetric Encryption and the Key Distribution Problem"
+      },
+      {
+        "id": "p6-lesson-2",
+        "title": "Asymmetric Encryption, RSA, ECC and Key Exchange"
+      },
+      {
+        "id": "p6-lesson-3",
+        "title": "Hashing in Practice — SHA-256, Salting, HMAC and Signatures"
+      },
+      {
+        "id": "p6-lesson-4",
+        "title": "PKI, Certificates and the TLS Handshake"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p6-lab-0",
+        "title": "Distinguish Encryption, Hashing, Encoding and Signing"
+      },
+      {
+        "id": "p6-lab-1",
+        "title": "Symmetric, Asymmetric and Key Exchange"
+      },
+      {
+        "id": "p6-lab-2",
+        "title": "Certificates, PKI and the Trust Chain"
+      },
+      {
+        "id": "p6-lab-3",
+        "title": "Trace the TLS Handshake"
+      }
+    ]
+  },
+  {
+    "id": "phase-7",
+    "number": 7,
+    "title": "Security Operations / SOC",
+    "description": "The largest exam domain at 28%, and where every earlier phase converges. The SOC toolchain, the log sources, alert triage and the false positive problem, and a full investigation of the intrusion this platform has carried since Phase 0.",
+    "lessons": [
+      {
+        "id": "p7-lesson-0",
+        "title": "The SOC Toolchain — SIEM, EDR, XDR and SOAR"
+      },
+      {
+        "id": "p7-lesson-1",
+        "title": "Reading the Log Sources"
+      },
+      {
+        "id": "p7-lesson-2",
+        "title": "Alert Triage and the False Positive Problem"
+      },
+      {
+        "id": "p7-lesson-3",
+        "title": "Threat Intelligence, IOCs and IOAs"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p7-lab-0",
+        "title": "Know Your Tools and Your Logs"
+      },
+      {
+        "id": "p7-lab-1",
+        "title": "Triage the Alert Queue"
+      },
+      {
+        "id": "p7-lab-2",
+        "title": "Investigate the Intrusion"
+      },
+      {
+        "id": "p7-lab-3",
+        "title": "Indicators and Durable Detection"
+      }
+    ]
+  },
+  {
+    "id": "phase-8",
+    "number": 8,
+    "title": "Windows Security",
+    "description": "The platform most enterprises actually run. Accounts and the privilege model, NTFS permissions, Defender and firewall, the logging settings that are off by default, and the persistence mechanisms that make an incident recur.",
+    "lessons": [
+      {
+        "id": "p8-lesson-0",
+        "title": "Accounts, Groups and the Windows Privilege Model"
+      },
+      {
+        "id": "p8-lesson-1",
+        "title": "NTFS Permissions and the Share Interaction"
+      },
+      {
+        "id": "p8-lesson-2",
+        "title": "Defender, Firewall and Endpoint Controls"
+      },
+      {
+        "id": "p8-lesson-3",
+        "title": "Event Viewer, Sysmon and PowerShell Logging"
+      },
+      {
+        "id": "p8-lesson-4",
+        "title": "Services, Scheduled Tasks, Registry and Persistence"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p8-lab-0",
+        "title": "Create Users and Groups in an Isolated Lab"
+      },
+      {
+        "id": "p8-lab-1",
+        "title": "Apply and Interpret NTFS Permissions"
+      },
+      {
+        "id": "p8-lab-2",
+        "title": "Inspect Windows Events"
+      },
+      {
+        "id": "p8-lab-3",
+        "title": "Identify Suspicious Process Behaviour"
+      },
+      {
+        "id": "p8-lab-4",
+        "title": "Investigate Failed Authentication"
+      },
+      {
+        "id": "p8-lab-5",
+        "title": "Harden a Windows Endpoint"
+      }
+    ]
+  },
+  {
+    "id": "phase-9",
+    "number": 9,
+    "title": "Linux Security",
+    "description": "The counterpart to Windows Security, asking the same questions in a different dialect. Users and sudo, permissions and the special bits, SSH hardening, systemd and persistence, logs and auditd — closing with an explicit mapping between the two platforms.",
+    "lessons": [
+      {
+        "id": "p9-lesson-0",
+        "title": "Users, Groups and sudo"
+      },
+      {
+        "id": "p9-lesson-1",
+        "title": "File Permissions and the Special Bits"
+      },
+      {
+        "id": "p9-lesson-2",
+        "title": "SSH, Services and systemd"
+      },
+      {
+        "id": "p9-lesson-3",
+        "title": "Linux Logs, auditd and Secure Configuration"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p9-lab-0",
+        "title": "Create Users and Review sudo"
+      },
+      {
+        "id": "p9-lab-1",
+        "title": "Configure and Audit File Permissions"
+      },
+      {
+        "id": "p9-lab-2",
+        "title": "Harden SSH"
+      },
+      {
+        "id": "p9-lab-3",
+        "title": "Inspect Authentication Logs"
+      },
+      {
+        "id": "p9-lab-4",
+        "title": "Investigate Suspicious Activity"
+      }
+    ]
+  },
+  {
+    "id": "phase-10",
+    "number": 10,
+    "title": "Vulnerability Management",
+    "description": "Finding weaknesses systematically rather than by hand. CVE and CVSS, scan types and why false positives happen, verification before reporting, and prioritisation by real exposure rather than by the number the scanner printed.",
+    "lessons": [
+      {
+        "id": "p10-lesson-0",
+        "title": "Vulnerabilities, CVE and CVSS"
+      },
+      {
+        "id": "p10-lesson-1",
+        "title": "Vulnerability Scanning, False Positives and Verification"
+      },
+      {
+        "id": "p10-lesson-2",
+        "title": "Prioritisation, Remediation and Validation"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p10-lab-0",
+        "title": "Score Vulnerabilities with CVSS"
+      },
+      {
+        "id": "p10-lab-1",
+        "title": "Scan an Isolated Lab System"
+      },
+      {
+        "id": "p10-lab-2",
+        "title": "Verify Findings and Eliminate False Positives"
+      },
+      {
+        "id": "p10-lab-3",
+        "title": "Prioritise, Remediate and Validate"
+      }
+    ]
+  },
+  {
+    "id": "phase-11",
+    "number": 11,
+    "title": "Network Security",
+    "description": "Building and securing an enterprise network on the Phase 4 zone architecture. Firewall rule order and shadowing, VLAN segmentation and its failure modes, IDS and IPS placement, wireless and NAC, and the DHCP and DNS controls that close on-path attacks.",
+    "lessons": [
+      {
+        "id": "p11-lesson-0",
+        "title": "Firewalls, ACLs and Rule Order"
+      },
+      {
+        "id": "p11-lesson-1",
+        "title": "Segmentation, VLANs and Monitoring"
+      },
+      {
+        "id": "p11-lesson-2",
+        "title": "Wireless, NAC, VPN and Infrastructure Services"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p11-lab-0",
+        "title": "Analyse a Firewall Rule Set"
+      },
+      {
+        "id": "p11-lab-1",
+        "title": "Review an Enterprise Network Configuration"
+      },
+      {
+        "id": "p11-lab-2",
+        "title": "Harden the Network"
+      }
+    ]
+  },
+  {
+    "id": "phase-12",
+    "number": 12,
+    "title": "Incident Response",
+    "description": "The seven-phase lifecycle, evidence handling and order of volatility, and containment judged on two axes — stopping the attacker and preserving the evidence. Closes the incident this platform has carried since Phase 0.",
+    "lessons": [
+      {
+        "id": "p12-lesson-0",
+        "title": "The Incident Response Lifecycle"
+      },
+      {
+        "id": "p12-lesson-1",
+        "title": "Evidence, Volatility and Containment"
+      },
+      {
+        "id": "p12-lesson-2",
+        "title": "Incident Types and the Response Report"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p12-lab-0",
+        "title": "Work the Lifecycle and Handle Evidence"
+      },
+      {
+        "id": "p12-lab-1",
+        "title": "Contain Without Destroying Evidence"
+      },
+      {
+        "id": "p12-lab-2",
+        "title": "Close the Incident and Write the Report"
+      }
+    ]
+  },
+  {
+    "id": "phase-13",
+    "number": 13,
+    "title": "Threat Intelligence",
+    "description": "Turn artifacts into actionable intelligence: intelligence lifecycle, IOC/IOA, Pyramid of Pain, ATT&CK mapping, threat actor types, feed quality, STIX/TAXII, and Admiralty Code.",
+    "lessons": [
+      {
+        "id": "p13-lesson-0",
+        "title": "Intelligence Lifecycle and Feed Quality"
+      },
+      {
+        "id": "p13-lesson-1",
+        "title": "From IOCs to TTPs – Building Durable Detections"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p13-lab-0",
+        "title": "Triage Threat Intelligence Feeds"
+      },
+      {
+        "id": "p13-lab-1",
+        "title": "Classify Indicators and Map the Incident"
+      }
+    ]
+  },
+  {
+    "id": "phase-14",
+    "number": 14,
+    "title": "Cloud Security",
+    "description": "Master cloud service models, the shared responsibility boundary, Cloud IAM, security groups, logging, encryption, container and serverless security, API protection, and secrets management — then audit a simulated cloud environment for misconfigurations.",
+    "lessons": [
+      {
+        "id": "p14-lesson-0",
+        "title": "Cloud Service Models & Shared Responsibility"
+      },
+      {
+        "id": "p14-lesson-1",
+        "title": "Cloud-Native Risks & Modern Workloads"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p14-lab-0",
+        "title": "Audit a Cloud Environment"
+      },
+      {
+        "id": "p14-lab-1",
+        "title": "Secure a Cloud-Native Deployment"
+      }
+    ]
+  },
+  {
+    "id": "phase-15",
+    "number": 15,
+    "title": "Mobile / IoT / Embedded Security",
+    "description": "Master mobile device ownership models, MDM/MAM, mobile application and OS security, then move to IoT and embedded systems: default-credential risk, firmware lifecycle, device identity, and network segmentation — and design a secure enterprise IoT network.",
+    "lessons": [
+      {
+        "id": "p15-lesson-0",
+        "title": "Mobile Security & Device Management"
+      },
+      {
+        "id": "p15-lesson-1",
+        "title": "IoT & Embedded Device Security"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p15-lab-0",
+        "title": "Audit a Mobile Device Fleet"
+      },
+      {
+        "id": "p15-lab-1",
+        "title": "Design a Secure Enterprise IoT Network"
+      }
+    ]
+  },
+  {
+    "id": "phase-16",
+    "number": 16,
+    "title": "Application & Data Security",
+    "description": "Master secure application development (shift left, input validation, authentication vs authorisation, OWASP Top 10), then data security: classification tiers, data states, DLP, tokenization vs masking vs encryption, and retention — applied to a simulated vulnerable application and data inventory.",
+    "lessons": [
+      {
+        "id": "p16-lesson-0",
+        "title": "Secure Application Development"
+      },
+      {
+        "id": "p16-lesson-1",
+        "title": "Data Security & Protection"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p16-lab-0",
+        "title": "Find and Fix Injection & Access Control Vulnerabilities"
+      },
+      {
+        "id": "p16-lab-1",
+        "title": "Classify and Protect Sensitive Data"
+      }
+    ]
+  },
+  {
+    "id": "phase-17",
+    "number": 17,
+    "title": "Governance, Risk & Compliance",
+    "description": "Master the risk management cycle (risk register, ALE, treatment), the policy/standard/procedure/guideline hierarchy, and security awareness, then compliance frameworks, audits, third-party vendor risk, and business impact analysis — applied to a simulated risk assessment for a fictional company.",
+    "lessons": [
+      {
+        "id": "p17-lesson-0",
+        "title": "Risk Management & Governance"
+      },
+      {
+        "id": "p17-lesson-1",
+        "title": "Compliance, Audits & Third-Party Risk"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p17-lab-0",
+        "title": "Conduct a Security Risk Assessment"
+      },
+      {
+        "id": "p17-lab-1",
+        "title": "Assess Vendor & Compliance Risk"
+      }
+    ]
+  },
+  {
+    "id": "phase-18",
+    "number": 18,
+    "title": "Business Continuity & Disaster Recovery",
+    "description": "Master BCP vs DR, RTO/RPO, MTTR/MTBF, backup strategies and the 3-2-1 rule, high availability, then alternate site selection, BC/DR testing, and disaster-specific recovery design for ransomware, server, network, and cloud outages.",
+    "lessons": [
+      {
+        "id": "p18-lesson-0",
+        "title": "BC/DR Fundamentals & Metrics"
+      },
+      {
+        "id": "p18-lesson-1",
+        "title": "Recovery Sites, Testing & Disaster Scenarios"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p18-lab-0",
+        "title": "Calculate Recovery Objectives and Choose a Recovery Site"
+      },
+      {
+        "id": "p18-lab-1",
+        "title": "Design Recovery Plans for Four Disaster Scenarios"
+      }
+    ]
+  },
+  {
+    "id": "phase-19",
+    "number": 19,
+    "title": "Security Hardening",
+    "description": "Consolidate and extend endpoint and network hardening: cross-platform control categories, patch management as a process, PowerShell security controls, Linux service/MAC hardening, network attack surface reduction, centralised AAA, ACL design, and a secure, segmented management plane — applied to a deliberately insecure mixed environment.",
+    "lessons": [
+      {
+        "id": "p19-lesson-0",
+        "title": "Cross-Platform Endpoint Hardening"
+      },
+      {
+        "id": "p19-lesson-1",
+        "title": "Network & Infrastructure Hardening"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p19-lab-0",
+        "title": "Harden a Windows and Linux Endpoint Baseline"
+      },
+      {
+        "id": "p19-lab-1",
+        "title": "Harden the Network Management Plane"
+      }
+    ]
+  },
+  {
+    "id": "phase-20",
+    "number": 20,
+    "title": "Security Automation",
+    "description": "Master Python and JSON fundamentals for security scripting, regex-based log parsing, secure API credential handling, and SOAR concepts, then apply them to the core automation projects: failed-login detection, IOC extraction, automated report generation, threat-intelligence API querying, and evidence collection with chain of custody.",
+    "lessons": [
+      {
+        "id": "p20-lesson-0",
+        "title": "Python & Automation Fundamentals for Security"
+      },
+      {
+        "id": "p20-lesson-1",
+        "title": "Building Security Automation Projects"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p20-lab-0",
+        "title": "Parse Authentication Logs and Detect Failed Login Patterns"
+      },
+      {
+        "id": "p20-lab-1",
+        "title": "Automate a Security Report and Query a Simulated API"
+      }
+    ]
+  },
+  {
+    "id": "phase-21",
+    "number": 21,
+    "title": "Wireshark & Packet Analysis",
+    "description": "Master reading a packet capture: ARP, ICMP, TCP (flags and the three-way handshake), UDP, DNS, DHCP, HTTP, and TLS, then apply that skill to identify protocols, follow full conversations, find suspicious traffic (ARP spoofing, DNS tunnelling, cleartext credentials, SYN floods), and explain the evidence.",
+    "lessons": [
+      {
+        "id": "p21-lesson-0",
+        "title": "Packet Capture Fundamentals: ARP, ICMP, TCP, UDP"
+      },
+      {
+        "id": "p21-lesson-1",
+        "title": "Application-Layer Protocols & Following Conversations"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p21-lab-0",
+        "title": "Identify Protocols and Follow a TCP Conversation"
+      },
+      {
+        "id": "p21-lab-1",
+        "title": "Find Suspicious Traffic and Explain the Evidence"
+      }
+    ]
+  },
+  {
+    "id": "phase-22",
+    "number": 22,
+    "title": "Security Troubleshooting Center",
+    "description": "Investigate ten realistic security scenarios through a structured, eight-panel investigation interface — diagnosing root cause and recommended action from evidence rather than instinct.",
+    "lessons": [
+      {
+        "id": "p22-lesson-0",
+        "title": "Structured Security Troubleshooting"
+      },
+      {
+        "id": "p22-lesson-1",
+        "title": "Recognising the Ten Common Alert Categories"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p22-lab-0",
+        "title": "Investigate a Compromised Account Using the Investigation Interface"
+      },
+      {
+        "id": "p22-lab-1",
+        "title": "Diagnose All Ten Troubleshooting Center Scenarios"
+      }
+    ]
+  },
+  {
+    "id": "phase-23",
+    "number": 23,
+    "title": "Full SOC Capstone",
+    "description": "Work a second full incident — an enterprise ransomware event via a compromised vendor VPN account — through detect, triage, investigate, collect evidence, contain, remediate, recover, and document, across the full enterprise topology.",
+    "lessons": [
+      {
+        "id": "p23-lesson-0",
+        "title": "The Full Attack Chain, End to End"
+      },
+      {
+        "id": "p23-lesson-1",
+        "title": "Ransomware Response and the Order-of-Volatility Exception"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p23-lab-0",
+        "title": "Detect, Triage, Investigate, and Collect Evidence"
+      },
+      {
+        "id": "p23-lab-1",
+        "title": "Contain, Remediate, Recover, and Document"
+      }
+    ]
+  },
+  {
+    "id": "phase-24",
+    "number": 24,
+    "title": "Security+ Exam Preparation",
+    "description": "Build and use an exam-preparation toolkit: domain-scoped quizzes, weak-area review, adaptive sessions, and full timed mock exams with a weighted scaled score and readiness verdict.",
+    "lessons": [
+      {
+        "id": "p24-lesson-0",
+        "title": "Reading a Question Like the Exam Wants You To"
+      },
+      {
+        "id": "p24-lesson-1",
+        "title": "Building a Study Plan From Your Own Data"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p24-lab-0",
+        "title": "Build a Domain-Weighted Study Plan"
+      },
+      {
+        "id": "p24-lab-1",
+        "title": "Run a Weak-Area Review and a Full Mock Exam"
+      }
+    ]
+  },
+  {
+    "id": "phase-25",
+    "number": 25,
+    "title": "GitHub Cybersecurity Portfolio",
+    "description": "Turn completed labs into professional, consistently structured GitHub repositories, then curate and index a role-targeted portfolio across every domain this platform covers.",
+    "lessons": [
+      {
+        "id": "p25-lesson-0",
+        "title": "What Makes a Security Portfolio Repo Credible"
+      },
+      {
+        "id": "p25-lesson-1",
+        "title": "Building the Portfolio, Lab by Lab"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p25-lab-0",
+        "title": "Generate and Review a Professional Lab Repository"
+      },
+      {
+        "id": "p25-lab-1",
+        "title": "Curate a Role-Targeted Portfolio Index"
+      }
+    ]
+  },
+  {
+    "id": "phase-26",
+    "number": 26,
+    "title": "Career Mode",
+    "description": "Map a target role's job description to Security+ concepts, run a gap analysis against your own mastery data, rehearse interview and troubleshooting questions, and recommend portfolio projects — while never fabricating professional experience.",
+    "lessons": [
+      {
+        "id": "p26-lesson-0",
+        "title": "From Job Description to Study Plan"
+      },
+      {
+        "id": "p26-lesson-1",
+        "title": "Interview Readiness and Professional Honesty"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p26-lab-0",
+        "title": "Map a Job Description to a Targeted Study Plan"
+      },
+      {
+        "id": "p26-lab-1",
+        "title": "Rehearse Interview Questions and Check Portfolio Honesty"
+      }
+    ]
+  },
+  {
+    "id": "phase-27",
+    "number": 27,
+    "title": "Security+ to IAM Career Bridge",
+    "description": "Connect every relevant Security+ concept to how identity is actually implemented, logged, and investigated — authentication, authorization, MFA, SSO, RBAC, Zero Trust, privileged access, identity telemetry, and IAM incident containment — then meet the vendor platforms, gated behind the concepts they implement.",
+    "lessons": [
+      {
+        "id": "p27-lesson-0",
+        "title": "How Security+ Identity Controls Are Actually Implemented"
+      },
+      {
+        "id": "p27-lesson-1",
+        "title": "Zero Trust, Privileged Access, and IAM Incident Investigation"
+      }
+    ],
+    "labs": [
+      {
+        "id": "p27-lab-0",
+        "title": "Trace an Identity Incident Across Three Log Sources"
+      },
+      {
+        "id": "p27-lab-1",
+        "title": "Map Vendor Features Back to the Concepts They Implement"
+      }
+    ]
+  }
+]
