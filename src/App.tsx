@@ -110,6 +110,9 @@ const CareerModeView = lazy(() =>
 const IamBridgeView = lazy(() =>
   import('./components/IamBridgeView').then((m) => ({ default: m.IamBridgeView }))
 );
+const CertificateView = lazy(() =>
+  import('./components/CertificateView').then((m) => ({ default: m.CertificateView }))
+);
 
 function RouteFallback() {
   return <div className="p-6 text-sm text-muted">Loading…</div>;
@@ -155,6 +158,7 @@ export function App() {
           <Route path="/exam-prep" element={<ExamPrepView />} />
           <Route path="/career-mode" element={<CareerModeView />} />
           <Route path="/iam-bridge" element={<IamBridgeView />} />
+          <Route path="/certificate" element={<CertificateView />} />
           <Route path="/labs" element={<LabLibrary />} />
           <Route path="/lesson/:lessonId" element={<LessonView />} />
           <Route path="/lab/:labId" element={<LabView />} />
